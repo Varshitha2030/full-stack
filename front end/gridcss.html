@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Internship Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            font-size: 16px;
+            --primary-color: #080808;
+            --bg-color: #80b5e9;
+            --border-radius: 0.5rem;
+        }
+        body {
+            background: var(--bg-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 40rem;
+            margin: 2rem auto;
+            background: #ca9e9e;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
+            display: grid;
+            gap: 2rem;
+        }
+        h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        label {
+            font-size: 1rem;
+            color: #333;
+        }
+        input, select, textarea {
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #1a1818;
+            border-radius: var(--border-radius);
+            background: #f7f4f4;
+            transition: border-color 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        button {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background: #1b4fa0;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Internship Registration</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College Name</label>
+                <input type="text" id="college" name="college" required>
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <input type="text" id="course" name="course" required>
+            </div>
+            <div class="form-group">
+                <label for="year">Year of Study</label>
+                <select id="year" name="year" required>
+                    <option value="">Select</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
+            </div>
+            <div class="form-group full-width">
+                <label for="skills">Skills</label>
+                <input type="text" id="skills" name="skills" placeholder="e.g. Java, Python, HTML" required>
+            </div>
+            <div class="form-group full-width">
+                <label for="statement">Why do you want this internship?</label>
+                <textarea id="statement" name="statement" rows="3" required></textarea>
+            </div>
+            <div class="form-group full-width">
+                <button type="submit">Apply</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
